@@ -1,0 +1,189 @@
+@use "../../styles/variables" as *;
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/Grid.png"),
+    linear-gradient(to bottom, #dceef9, #5aa6d2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--black);
+}
+
+.content {
+  width: 100vw;
+  padding-top: 4vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  text-align: center;
+}
+
+.titleText {
+  margin: 0 0 1vh 0;
+  font-family: var(--primary-font);
+  font-size: 6vh;
+  line-height: $line-height-tight;
+  color: #325f79;
+}
+
+.headerText {
+  margin: 0;
+  padding: 1vh 10vw 0;
+  font-family: var(--secondary-font);
+  font-size: 2.4vh;
+  line-height: $line-height-normal;
+  color: #325f79;
+}
+
+.illustration {
+  position: relative;
+  width: 100vw;
+  height: 55vh;
+  margin-top: 6vh;
+}
+
+.islandBase {
+  position: absolute;
+  transform-origin: bottom center;
+}
+
+.islandImage {
+  object-fit: contain;
+}
+
+.leftConstruction {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  width: 20vw;
+  height: 19vh;
+  transform: translateX(-50%);
+}
+
+.rightConstruction {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  width: 21vw;
+  height: 21vh;
+  transform: translateX(-50%);
+}
+
+.backConstruction {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  width: 20vw;
+  height: 18vh;
+  transform: translateX(-50%);
+}
+
+.frontConstruction {
+  position: absolute;
+  left: 50%;
+  bottom: 2vh;
+  width: 19vw;
+  height: 19vh;
+  transform: translateX(-50%);
+}
+
+.frontLabel {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 19vw;
+  height: 4.5vh;
+  transform: translateX(-50%);
+}
+
+.frontLabelImage {
+  object-fit: contain;
+}
+
+.rightLabel {
+  position: absolute;
+  left: 50%;
+  bottom: 3;
+  width: 14vw;
+  height: 3.5vh;
+  transform: translateX(-50%);
+}
+
+.rightLabelImage {
+  object-fit: contain;
+}
+
+.backLabel {
+  position: absolute;
+  left: 50%;
+  bottom: -3;
+  width: 12vw;
+  height: 3vh;
+  transform: translateX(-50%);
+}
+
+.backLabelImage {
+  object-fit: contain;
+}
+
+.leftLabel {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 14vw;
+  height: 3.5vh;
+  transform: translateX(-50%);
+}
+
+.leftLabelImage {
+  object-fit: contain;
+}
+
+.banner {
+  position: absolute;
+  bottom: -14vh;
+  left: 50%;
+  width: 37vw;
+  padding: 1.2vh 2.5vw;
+  background: #3e5a6b;
+  border-radius: 2.7vh;
+  color: #ffffff;
+  font-family: var(--secondary-font);
+  font-size: 1.8vh;
+  line-height: 1.6;
+  text-align: center;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.bannerText {
+  margin: 0;
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  bottom: 10vh;
+  width: 6.5vh;
+  height: 6.5vh;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrowLeft {
+  left: 28vw;
+}
+
+.arrowRight {
+  right: 28vw;
+}
+

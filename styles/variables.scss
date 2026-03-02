@@ -1,0 +1,94 @@
+// =============================================================================
+// Design Tokens - Use these throughout the app via @use or @import
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+$color-primary: #0066cc;
+$color-primary-hover: #0052a3;
+$color-primary-light: #e6f2ff;
+
+$color-secondary: #6c757d;
+$color-secondary-hover: #5a6268;
+$color-secondary-light: #e9ecef;
+
+$color-neutral-50: #f8f9fa;
+$color-neutral-100: #f1f3f5;
+$color-neutral-200: #e9ecef;
+$color-neutral-300: #dee2e6;
+$color-neutral-400: #ced4da;
+$color-neutral-500: #adb5bd;
+$color-neutral-600: #6c757d;
+$color-neutral-700: #495057;
+$color-neutral-800: #343a40;
+$color-neutral-900: #212529;
+
+$color-success: #28a745;
+$color-warning: #ffc107;
+$color-error: #dc3545;
+$color-info: #17a2b8;
+
+$color-background: #ffffff;
+$color-background-alt: $color-neutral-50;
+$color-text: $color-neutral-900;
+$color-text-muted: $color-neutral-600;
+
+// -----------------------------------------------------------------------------
+// Spacing (8px base scale)
+// -----------------------------------------------------------------------------
+$spacing-xxs: 0.25rem;  // 4px
+$spacing-xs: 0.5rem;   // 8px
+$spacing-sm: 1rem;     // 16px
+$spacing-md: 1.5rem;   // 24px
+$spacing-lg: 2rem;     // 32px
+$spacing-xl: 2.5rem;   // 40px
+$spacing-2xl: 3rem;    // 48px
+$spacing-3xl: 4rem;    // 64px
+
+// -----------------------------------------------------------------------------
+// Breakpoints
+// -----------------------------------------------------------------------------
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1280px;
+$breakpoint-ultrawide: 1536px;
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+$font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+$font-family-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+  Consolas, "DejaVu Sans Mono", monospace;
+
+$font-size-xs: 0.75rem;   // 12px
+$font-size-sm: 0.875rem;  // 14px
+$font-size-base: 1rem;    // 16px
+$font-size-lg: 1.125rem;  // 18px
+$font-size-xl: 1.25rem;   // 20px
+$font-size-2xl: 1.5rem;   // 24px
+$font-size-3xl: 1.875rem; // 30px
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.625;
+$line-height-loose: 2;
+
+// -----------------------------------------------------------------------------
+// Other
+// -----------------------------------------------------------------------------
+$border-radius-sm: 0.25rem;  // 4px
+$border-radius-md: 0.5rem;   // 8px
+$border-radius-lg: 0.75rem;  // 12px
+$border-radius-full: 9999px;
+
+$transition-fast: 150ms ease;
+$transition-normal: 250ms ease;
+$transition-slow: 350ms ease;

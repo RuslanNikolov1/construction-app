@@ -1,0 +1,68 @@
+@use "../../styles/variables" as *;
+
+.ServicesSection {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/Services section Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.ServicesLabelWrapper {
+  position: relative;
+  width: 30vw;
+  height: 8vh;
+  margin-top: 14vh;
+}
+
+.ServicesLabel {
+  object-fit: contain;
+}
+
+.ServiceWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  width: 10vw;
+  gap: 1vh;
+  text-align: center;
+  color: var(--blue-1000);
+  font-size: 2.5vh;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+}
+
+.ServiceWrapper1 {
+  left: 30.5vw;
+  top: 21vh;
+}
+
+.ServiceWrapper2 {
+  top: 21vh;
+  right: 31.5vw;
+}
+
+.ServiceWrapper3 {
+  bottom: 23vh;
+  left: 28.5vw;
+}
+
+.ServiceWrapper4 {
+  bottom: 23vh;
+  right: 28.5vw;
+}
+
+
+@media (max-width: $breakpoint-tablet) {
+  .ServicesContent {
+    padding: 6vh 6vw 0;
+    align-items: center;
+  }
+}

@@ -1,0 +1,155 @@
+@use "../../styles/variables" as *;
+
+.section {
+  position: relative;
+  min-height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+  color: var(--black);
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sky {
+  position: absolute;
+  inset: 0;
+  background-image: url("/introduction-background.png"),
+    linear-gradient(
+      to bottom,
+      var(--hero-sky-top),
+      var(--hero-sky-bottom)
+    );
+  background-size: cover;
+  background-position: center top;
+}
+
+.city {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 25dvh;
+  background-image: url("/introduction-city.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl;
+  padding-top: 13vh;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.heading {
+  margin: 0 0 $spacing-md 0;
+  font-family: var(--primary-font);
+  font-size: var(--header1);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.headingLine {
+  display: block;
+  font-family: var(--primary-font);
+}
+
+.letterWrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.letter {
+  display: inline-block;
+}
+
+.headingAccent {
+  color: var(--accent-orange);
+}
+
+.subheading {
+  margin: 0 0 0.25rem 0;
+  font-family: var(--secondary-font);
+  font-size: var(--header2);
+  width: 55vw;
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+}
+
+.subheadingEmphasis {
+  font-weight: $font-weight-bold;
+}
+
+.subheadingDivider {
+  margin: 0;
+  width: 12vw;
+  height: 2px;
+  background-color: var(--accent-orange);
+}
+
+.descriptionGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4vw;
+  width: 68vw;
+}
+
+.descriptionBlock {
+  position: relative;
+  padding: 1.5vw;
+  flex: 1 1 30vw;
+}
+
+.descriptionText {
+  margin: 0;
+  font-family: var(--secondary-font);
+  font-size: var(--header4);
+  line-height: $line-height-normal;
+  text-align: left;
+}
+
+.textEmphasis {
+  font-weight: $font-weight-bold;
+}
+
+.lShape {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-left: 2px solid var(--accent-orange);
+  border-bottom: 2px solid var(--accent-orange);
+  pointer-events: none;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .content {
+    padding: 80px $spacing-md $spacing-2xl;
+    gap: $spacing-lg;
+  }
+
+  .descriptionBlock {
+    flex: 1 1 100%;
+  }
+}
+
