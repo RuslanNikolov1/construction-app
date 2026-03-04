@@ -29,13 +29,14 @@
   font-size: 6vh;
   line-height: $line-height-tight;
   color: #325f79;
+  text-transform: uppercase;
 }
 
 .headerText {
   margin: 0;
   padding: 1vh 10vw 0;
   font-family: var(--secondary-font);
-  font-size: 2.4vh;
+  font-size: var(--header4);
   line-height: $line-height-normal;
   color: #325f79;
 }
@@ -177,6 +178,14 @@
   background: none;
   cursor: pointer;
   z-index: 10;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover{
+  width: 7.5vh;
+  height: 7.5vh;
+  bottom: 9.5vh;
+  transition: width 0.3s ease, height 0.3s ease, bottom 0.3s ease;
 }
 
 .arrowLeft {

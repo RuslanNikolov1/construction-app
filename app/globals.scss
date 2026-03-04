@@ -60,6 +60,10 @@ a {
   --hero-sky-top: #94d2fe;
   --hero-sky-bottom: #fee2c6;
   --blue-1000: #00324F;
+  --blue-900: #325F79
+  --gray-200: #EDEDED;
+  --blue-300: #46BBFF;
+  --blue-700: #2C6E95;
 
   /* Fonts */
   --primary-font: "Geologica", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -70,8 +74,8 @@ a {
     sans-serif;
 
   /* Typography scale */
-  --header1: 7dvh; /* main hero title */
+  --header1: 6dvh; /* main hero title */
   --header2: 3.5dvh; /* subtitle */
+  --header3: 2.2dvh; /* subtitle */
   --header4: 2.5dvh; /* description blocks */
 }
-

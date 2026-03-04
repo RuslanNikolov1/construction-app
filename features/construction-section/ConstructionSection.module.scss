@@ -1,0 +1,331 @@
+@use "../../styles/variables" as *;
+
+.ConstructionDescription {
+  width: 100vw;
+  height: 22vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.ConstructionTitle {
+  font-size: var(--header1);
+  font-family: var(--primary-font);
+  color: var(--blue-1000);
+}
+
+.ConstructionDescriptionText {
+  font-size: var(--header4);
+  font-family: var(--secondary-font);
+  color: var(--blue-1000);
+  padding: 1vh 10vw 0;
+  text-align: center;
+  line-height: $line-height-normal;
+}
+
+.ConstructionTabs {
+  width: 100vw;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.ConstructionTab {
+  flex: 1 1 33.333vw;
+  border: none;
+  border-right: 0.3vw solid #ffffff;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;
+}
+
+.ConstructionTab:last-child {
+  border-right: none;
+}
+
+.ConstructionTabActive {
+  background-color: var(--blue-300);
+}
+
+.ConstructionTabInactive {
+  background-color: var(--blue-700);
+}
+
+.ConstructionTabInactive:hover {
+  background-color: var(--blue-300);
+  transition: background-color 0.3s ease;
+}
+
+.ConstructionTab:focus-visible {
+  box-shadow: 0 0 0 0.2vw var(--blue-1000);
+}
+
+.ConstructionTabLabel {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: var(--header3);
+  width: 70%;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 2vw;
+}
+
+.ConstructionTabLabelVisuallyHidden {
+  position: absolute;
+  width: 0.1vw;
+  height: 0.1vh;
+  padding: 0;
+  margin: -0.1vh;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* -------------------------------------------------------
+   ConstructionContent — two-column redesign
+------------------------------------------------------- */
+
+.ConstructionContent {
+  position: relative;
+  width: 100vw;
+  height: 72vh;
+  overflow: hidden;
+}
+
+.ConstructionContentBg {
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  user-select: none;
+  filter: blur(0.75px);
+}
+
+.ConstructionContentOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: 1;
+}
+
+.ConstructionContentInner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+  padding: 0 3vw 3vh 3vw;
+}
+
+/* ---------- Left: 3D Model ---------- */
+
+.ConstructionModelPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+  width: 32vw;
+  margin-bottom: 1vh;
+}
+
+.ConstructionDragLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21vw;
+  height: 5vh;
+  margin-bottom: -1vh;
+}
+
+.ConstructionDragLabelBg {
+  position: absolute;
+  inset: 0;
+  background: #454545;
+  border-radius: 2.5vh;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.ConstructionDragIcon {
+  position: relative;
+  z-index: 1;
+  width: 4vw;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 0.5vw;
+  transform: translateY(-0.25vh);
+}
+
+.ConstructionDragText {
+  position: relative;
+  z-index: 1;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: var(--header3);
+  color: #ffffff;
+}
+
+.ConstructionModelFrame {
+  position: relative;
+  width: 32vw;
+  height: 47vh;
+  background: #ffffff;
+  border: 0.4vw solid #454545;
+  border-radius: 2.5vw;
+  overflow: hidden;
+}
+
+.ConstructionModelCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ConstructionModelImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------- Right: Text Panel ---------- */
+
+.ConstructionTextPanel {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50vw;
+}
+
+.ConstructionText {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: var(--header4);
+  color: var(--black, #000000);
+  line-height: 1.4;
+  margin-bottom: 3vh;
+}
+
+.ConstructionHorizontalDivider {
+  width: 100%;
+  height: 0;
+  border-top: 2px dashed rgba(0, 0, 0, 0.65);
+}
+
+.ConstructionListsRow {
+  display: flex;
+}
+
+.ConstructionAdvantages,
+.ConstructionDisadvantages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  padding: 1.5vw 1vw 0 1vw;
+}
+
+.ConstructionAdvantages {
+  padding-left: 0;
+}
+
+.ConstructionDisadvantages {
+  padding-right: 0;
+}
+
+.ConstructionVerticalDivider {
+  width: 0;
+  align-self: stretch;
+  border-left: 2px dashed rgba(0, 0, 0, 0.65);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.ConstructionListHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.ConstructionListIcon {
+  width: 1.5vw;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.ConstructionListTitle {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: var(--header3);
+  color: var(--black, #000000);
+  white-space: nowrap;
+}
+
+.ConstructionList {
+  list-style: decimal;
+  padding-left: 1.8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vh;
+}
+
+.ConstructionListItem {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: var(--header3);
+  color: var(--black, #000000);
+  line-height: 1.4;
+}
+
+/* ---------- Survey button ---------- */
+
+.ConstructionSurveyRow {
+  position: absolute;
+  bottom: 11vh;
+  right: 12vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2vh;
+}
+
+.ConstructionSurveyButton {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 0.2vw solid var(--black, #000000);
+  border-radius: 3vw;
+  padding: 0.8vh 2vw;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: var(--header3);
+  color: var(--black, #000000);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ConstructionSurveyButton:hover {
+  background: #454545;
+  color: #ffffff;
+}
+
+.ConstructionSurveyButton:focus-visible {
+  outline: 0.2vw solid var(--blue-1000);
+  outline-offset: 0.2vw;
+}
