@@ -75,6 +75,7 @@ export function IntroductionSection() {
       ref={sectionRef}
       className={styles.section}
       aria-labelledby="introduction-heading"
+      data-snap-section
     >
       <div className={styles.background} aria-hidden="true">
         <div className={styles.sky} />

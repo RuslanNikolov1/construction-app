@@ -317,7 +317,7 @@ export function DesignSection() {
   const handleLeft  = useCallback(() => rotate("counterclockwise"), [rotate]);
 
   return (
-    <section className={styles.section} aria-label="Follow-up content section">
+    <section className={styles.section} aria-label="Follow-up content section" data-snap-section>
       <div className={styles.content}>
         <p className={styles.titleText}>Проектиране</p>
         <p className={styles.headerText}>

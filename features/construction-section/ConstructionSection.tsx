@@ -3,7 +3,7 @@ import { ConstructionTabs } from "./ConstructionTabs";
 
 export function ConstructionSection() {
   return (
-    <section aria-label="Construction">
+    <section aria-label="Construction" data-snap-section>
       <div className={styles.ConstructionDescription}>
         <p className={styles.ConstructionTitle}>Строителство</p>
         <p className={styles.ConstructionDescriptionText}>

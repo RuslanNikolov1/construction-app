@@ -3,7 +3,7 @@ import styles from "./ServicesSection.module.scss";
 
 export function ServicesSection() {
   return (
-    <section className={styles.ServicesSection} aria-label="Services">
+    <section className={styles.ServicesSection} aria-label="Services" data-snap-section>
       <div className={styles.ServicesLabelWrapper}>
         <Image
           src="/Services label.png"

@@ -49,7 +49,11 @@ export function ConstructionContent({
               height={52}
               className={styles.ConstructionDragIcon}
             />
-            <p className={styles.ConstructionDragText}>Плъзнете за завъртане</p>
+            <p className={styles.ConstructionDragText}>
+              <span className={styles.ConstructionDragTextBold}>Плъзнете </span>за завъртане.
+              {' '}
+              <span className={styles.ConstructionDragTextBold}>Скрол </span>за приближаване.
+            </p>
           </div>
           <div className={styles.ConstructionModelFrame}>
             <ConstructionModelViewer />

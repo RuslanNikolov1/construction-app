@@ -28,7 +28,7 @@ export function ConstructionModelViewer({
 
     const viewer = new IfcViewerAPI({
       container,
-      backgroundColor: new Color(0xffffff),
+      backgroundColor: new Color(0xE5F4FF),
     });
 
     viewer.axes.setAxes();
