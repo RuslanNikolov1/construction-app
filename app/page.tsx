@@ -3,6 +3,7 @@ import { IntroductionSection } from "@/features/introduction/IntroductionSection
 import { DesignSection } from "@/features/design-section/DesignSection";
 import { ServicesSection } from "@/features/services-section/ServicesSection";
 import { ConstructionSection } from "@/features/construction-section/ConstructionSection";
+import { ContactSection } from "@/features/contact-section/ContactSection";
 import { ScrollSnapController } from "@/features/scroll-snap/ScrollSnapController";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <DesignSection />
       <ServicesSection />
       <ConstructionSection />
+      <ContactSection />
     </main>
   );
 }

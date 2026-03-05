@@ -74,8 +74,9 @@ a {
     sans-serif;
 
   /* Typography scale */
+  --header0: 7.5dvh; /* main hero title */
   --header1: 6dvh; /* main hero title */
-  --header2: 3.5dvh; /* subtitle */
-  --header3: 2.2dvh; /* subtitle */
-  --header4: 2.5dvh; /* description blocks */
+  --header2: 3.4dvh; /* subtitle */
+  --header3: 2.5dvh; /* description blocks */
+  --header4: 2.2dvh; /* subtitle */
 }

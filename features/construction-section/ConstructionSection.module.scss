@@ -17,7 +17,7 @@
 }
 
 .ConstructionDescriptionText {
-  font-size: var(--header4);
+  font-size: var(--header3);
   font-family: var(--secondary-font);
   color: var(--blue-1000);
   padding: 1vh 10vw 0;
@@ -71,7 +71,7 @@
 .ConstructionTabLabel {
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: var(--header3);
+  font-size: var(--header4);
   width: 70%;
   color: #ffffff;
   text-align: center;
@@ -174,7 +174,7 @@
   z-index: 1;
   font-family: var(--secondary-font);
   font-weight: 300;
-  font-size: var(--header3);
+  font-size: var(--header4);
   color: #ffffff;
 }
 
@@ -220,7 +220,7 @@
 .ConstructionText {
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: var(--header4);
+  font-size: var(--header3);
   color: var(--black, #000000);
   line-height: 1.4;
   margin-bottom: 3vh;
@@ -278,7 +278,7 @@
 .ConstructionListTitle {
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: var(--header3);
+  font-size: var(--header4);
   color: var(--black, #000000);
   white-space: nowrap;
 }
@@ -294,7 +294,7 @@
 .ConstructionListItem {
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: var(--header3);
+  font-size: var(--header4);
   color: var(--black, #000000);
   line-height: 1.4;
 }
@@ -318,7 +318,7 @@
   padding: 0.8vh 2vw;
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: var(--header3);
+  font-size: var(--header4);
   color: var(--black, #000000);
   cursor: pointer;
   white-space: nowrap;
