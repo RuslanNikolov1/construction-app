@@ -156,7 +156,7 @@ export function ContactSection() {
                 type="button"
                 onClick={() => setIsMapOpen(true)}
               >
-                Виж карта
+                Виж на карта
               </button>
             </div>
           </section>

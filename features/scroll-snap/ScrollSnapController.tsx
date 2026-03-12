@@ -105,6 +105,12 @@ export function ScrollSnapController() {
 
       if (Math.abs(e.deltaY) < WHEEL_THRESHOLD) return;
 
+      const direction = e.deltaY > 0 ? 1 : -1;
+
+      // Scrolling up: do not snap at all, let native scrolling handle it.
+      if (direction === -1) return;
+
+      // Scrolling down: snap to the next section.
       const sections = getSections();
       if (!sections.length) return;
 
@@ -112,16 +118,8 @@ export function ScrollSnapController() {
 
       if (isScrolling.current) return;
 
-      const direction = e.deltaY > 0 ? 1 : -1;
       const currentIndex = getCurrentIndex(sections);
-
-      // Scrolling up from the first snap section — go back to the banner.
-      if (direction === -1 && currentIndex === 0) {
-        scrollToBanner();
-        return;
-      }
-
-      scrollToSection(currentIndex + direction, sections);
+      scrollToSection(currentIndex + 1, sections);
     };
 
     const onTouchStart = (e: TouchEvent) => {
@@ -134,21 +132,19 @@ export function ScrollSnapController() {
       const delta = touchStartY.current - e.changedTouches[0].clientY;
       if (Math.abs(delta) < 30) return;
 
+      const direction = delta > 0 ? 1 : -1;
+
+      // Swiping up: do not snap at all, let native scrolling handle it.
+      if (direction === -1) return;
+
+      // Swiping down: snap to the next section.
       const sections = getSections();
       if (!sections.length) return;
 
       if (isScrolling.current) return;
 
-      const direction = delta > 0 ? 1 : -1;
       const currentIndex = getCurrentIndex(sections);
-
-      // Swiping up from the first snap section — go back to the banner.
-      if (direction === -1 && currentIndex === 0) {
-        scrollToBanner();
-        return;
-      }
-
-      scrollToSection(currentIndex + direction, sections);
+      scrollToSection(currentIndex + 1, sections);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });

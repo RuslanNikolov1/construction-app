@@ -47,8 +47,8 @@ export function IntroductionSection() {
       { clipPath: "inset(0 100% 0 0)" },
       {
         clipPath: "inset(0 0 0 0)",
-        duration: 0.4,
-        stagger: 0.06,
+        duration: 0.25,
+        stagger: 0.03,
         ease: "power2.out",
       }
     ).fromTo(
@@ -56,11 +56,11 @@ export function IntroductionSection() {
       { clipPath: "inset(0 100% 0 0)" },
       {
         clipPath: "inset(0 0 0 0)",
-        duration: 0.4,
-        stagger: 0.06,
+        duration: 0.25,
+        stagger: 0.03,
         ease: "power2.out",
       },
-      "-=0.2"
+      "-=0.1"
     );
 
     return () => {
